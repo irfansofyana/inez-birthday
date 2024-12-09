@@ -76,3 +76,9 @@ This project is a personal creation and is not licensed for public use.
 ## Created with ❤️
 
 Made with love for Inez's birthday celebration 🎉
+
+## Credits
+
+This project was developed with the assistance of:
+- [bolt.new](https://bolt.new) - AI-powered development platform
+- Windsurf AI - Agentic AI coding assistant
