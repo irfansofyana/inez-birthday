@@ -1,7 +1,7 @@
 export const images = {
   hero: {
-    url: "https://images.unsplash.com/photo-1464347744102-11db6282f854?auto=format&fit=crop&w=2400&q=80",
-    alt: "Birthday celebration background"
+    url: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=2400&q=80",
+    alt: "Green-themed birthday celebration background with tropical leaves and balloons"
   },
   gallery: [
     {
