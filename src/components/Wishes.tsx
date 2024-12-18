@@ -1,10 +1,10 @@
-import { Sparkles, Gift, Music } from 'lucide-react';
+import { Sparkles, Gift, Music, Heart, Star, Sun } from 'lucide-react';
 
 export function Wishes() {
   const wishes = [
     {
       id: 'sparkles',
-      icon: <Sparkles className="w-8 h-8 text-primary-400" />,
+      icon: <Sparkles className="w-8 h-8 text-primary-400" />, 
       wish: "May your day be filled with endless joy and laughter"
     },
     {
@@ -13,9 +13,24 @@ export function Wishes() {
       wish: "May all your dreams and wishes come true"
     },
     {
-      id: 'music',
+      id: 'music', 
       icon: <Music className="w-8 h-8 text-primary-600" />,
       wish: "May your life continue to be a beautiful melody"
+    },
+    {
+      id: 'heart',
+      icon: <Heart className="w-8 h-8 text-primary-400" />,
+      wish: "May love and happiness surround you always"
+    },
+    {
+      id: 'star',
+      icon: <Star className="w-8 h-8 text-primary-500" />,
+      wish: "May you shine bright and achieve everything you desire"
+    },
+    {
+      id: 'sun',
+      icon: <Sun className="w-8 h-8 text-primary-600" />,
+      wish: "May each sunrise bring you new opportunities and hope"
     }
   ];
 
