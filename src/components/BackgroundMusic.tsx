@@ -54,10 +54,10 @@ export const BackgroundMusic = ({ isPlaying }: BackgroundMusicProps) => {
           <audio
             ref={audioRef}
             loop
-            src="/background-music.mp3"
+            src="/inez-birthday/background-music.mp3"
           />
         </motion.div>
       )}
     </AnimatePresence>
   );
-};
+}
