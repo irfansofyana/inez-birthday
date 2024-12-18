@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/inez-birthday/',  // Update to match repository name under irfansofyana
+  publicDir: 'public',
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
