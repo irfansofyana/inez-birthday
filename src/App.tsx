@@ -11,6 +11,11 @@ import Footer from './components/Footer';
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
+  const handleCloseLetter = () => {
+    localStorage.removeItem('password_validated');
+    setIsUnlocked(false);
+  };
+
   return (
     <>
       <BackgroundMusic isPlaying={isUnlocked} />
@@ -24,7 +29,7 @@ function App() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Header />
+            <Header onCloseLetter={handleCloseLetter} />
             <Wishes />
             <Gallery />
             <Message />

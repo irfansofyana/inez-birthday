@@ -1,4 +1,4 @@
-import { useState, FormEvent, useEffect, useRef } from 'react';
+import { useState, FormEvent, useEffect, useRef, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface PasswordProtectionProps {
@@ -13,6 +13,14 @@ export const PasswordProtection = ({ onSuccess }: PasswordProtectionProps) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const hasAttemptedPlay = useRef(false);
 
+  useLayoutEffect(() => {
+    // Check if already validated
+    const isValidated = localStorage.getItem('password_validated') === 'true';
+    if (isValidated) {
+      onSuccess();
+    }
+  }, [onSuccess]);
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (password === import.meta.env.VITE_APP_PASSWORD) {
@@ -26,6 +34,8 @@ export const PasswordProtection = ({ onSuccess }: PasswordProtectionProps) => {
           }
         }, 50);
       }
+      // Store validation state in localStorage
+      localStorage.setItem('password_validated', 'true');
       onSuccess();
     } else {
       setError(true);
@@ -131,50 +141,63 @@ export const PasswordProtection = ({ onSuccess }: PasswordProtectionProps) => {
         }}
       />
       <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4 border-2 border-emerald-200">
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold text-emerald-600">
-            💌 Enter Password to Open
-          </h2>
-          {showPlayButton && (
+        <h2 className="text-2xl font-bold text-emerald-600 mb-4">
+          💌 Enter Password to Open Letter
+        </h2>
+        
+        {showPlayButton && (
+          <div className="mb-6 flex flex-col items-center">
+            <p className="text-sm text-emerald-600 mb-2">
+              {isPlaying ? "Background music is playing" : "Add some background music?"}
+            </p>
             <motion.button
               onClick={(e) => {
-                e.stopPropagation(); // Prevent triggering the page click handler
+                e.stopPropagation();
                 toggleMusic();
               }}
               type="button"
-              className={`relative flex items-center justify-center w-8 h-8 rounded-full transition-all duration-200 ease-in-out
+              className={`relative flex items-center justify-center px-4 py-2 rounded-full transition-all duration-200 ease-in-out
                 ${isPlaying 
                   ? 'bg-emerald-100 text-emerald-600 hover:bg-emerald-200' 
                   : 'bg-emerald-500 text-white hover:bg-emerald-600'
                 } 
                 shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2`}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.2 }}
               title={isPlaying ? "Pause Music" : "Play Music"}
             >
-              {isPlaying ? (
-                <span className="w-4 h-3 relative">
-                  <span className="absolute inset-0 flex items-center justify-center gap-[2px]">
-                    <span className="block w-[2px] bg-emerald-600 animate-music1"></span>
-                    <span className="block w-[2px] bg-emerald-600 animate-music2"></span>
-                    <span className="block w-[2px] bg-emerald-600 animate-music3"></span>
-                  </span>
-                </span>
-              ) : (
-                <svg 
-                  className="w-4 h-4" 
-                  fill="currentColor" 
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M18 10L5 3v14l13-7z" />
-                </svg>
-              )}
+              <div className="flex items-center space-x-2">
+                {isPlaying ? (
+                  <>
+                    <span className="w-4 h-3 relative">
+                      <span className="absolute inset-0 flex items-center justify-center gap-[2px]">
+                        <span className="block w-[2px] bg-emerald-600 animate-music1"></span>
+                        <span className="block w-[2px] bg-emerald-600 animate-music2"></span>
+                        <span className="block w-[2px] bg-emerald-600 animate-music3"></span>
+                      </span>
+                    </span>
+                    <span className="text-sm">Pause Music</span>
+                  </>
+                ) : (
+                  <>
+                    <svg 
+                      className="w-4 h-4" 
+                      fill="currentColor" 
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M18 10L5 3v14l13-7z" />
+                    </svg>
+                    <span className="text-sm">Play Music</span>
+                  </>
+                )}
+              </div>
             </motion.button>
-          )}
-        </div>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
