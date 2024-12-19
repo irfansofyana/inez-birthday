@@ -6,6 +6,7 @@ import { Message } from './components/Message';
 import { Wishes } from './components/Wishes';
 import { PasswordProtection } from './components/PasswordProtection';
 import { BackgroundMusic } from './components/BackgroundMusic';
+import Footer from './components/Footer';
 
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -27,6 +28,7 @@ function App() {
             <Wishes />
             <Gallery />
             <Message />
+            <Footer />
           </motion.div>
         )}
       </AnimatePresence>

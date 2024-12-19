@@ -4,7 +4,7 @@ export function Gallery() {
   return (
     <section className="py-20 bg-primary-100" id="gallery">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-primary-800">Our Beautiful Moments</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-primary-800">Some of Our Moments...</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {images.gallery.map((photo) => (
             <div key={photo.url} className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">

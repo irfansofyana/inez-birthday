@@ -3,7 +3,7 @@ import { images } from '../config/images';
 
 export function Header() {
   return (
-    <header className="relative h-screen flex items-center justify-center overflow-hidden">
+    <header className="relative h-screen flex items-end justify-center overflow-hidden pb-32">
       <div className="absolute inset-0">
         <img
           src={images.hero.url}

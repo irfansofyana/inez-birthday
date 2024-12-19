@@ -17,6 +17,25 @@ export default {
           900: '#14532d',
         },
       },
+      keyframes: {
+        music1: {
+          '0%, 100%': { height: '12px' },
+          '50%': { height: '4px' },
+        },
+        music2: {
+          '0%, 100%': { height: '8px' },
+          '50%': { height: '16px' },
+        },
+        music3: {
+          '0%, 100%': { height: '16px' },
+          '50%': { height: '6px' },
+        },
+      },
+      animation: {
+        music1: 'music1 1s infinite',
+        music2: 'music2 1s infinite 0.2s',
+        music3: 'music3 1s infinite 0.4s',
+      },
     },
   },
   plugins: [],

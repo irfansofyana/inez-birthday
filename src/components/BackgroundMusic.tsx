@@ -54,7 +54,7 @@ export const BackgroundMusic = ({ isPlaying }: BackgroundMusicProps) => {
           <audio
             ref={audioRef}
             loop
-            src="/inez-birthday/background-music.mp3"
+            src={`${import.meta.env.BASE_URL}music/happy-birthday.mp3`}
           />
         </motion.div>
       )}
