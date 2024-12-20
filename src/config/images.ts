@@ -36,138 +36,138 @@ export const images = {
   gallery: [
     {
       url: firstDate,
-      caption: "Our First Date",
+      caption: "Our First Date - after being official 🥰",
       alt: "A special moment from our first date together"
     },
     {
       url: sarinahDate,
-      caption: "Sarinah Date",
+      caption: "Sarinah Date!!! Thanks for guide me to this place 🛍️",
       alt: "Our lovely date at Sarinah"
     },
     {
       url: pimDate,
-      caption: "PIM Date",
+      caption: "PIM Date - PIM is our first place meet😜",
       alt: "Spending time together at Pondok Indah Mall"
     },
     {
       url: valentine,
-      caption: "Valentine's Day",
+      caption: "Giving you special things on Valentine's Day🤗",
       alt: "Celebrating our first Valentine's Day together"
     },
     {
       url: busyGirl,
-      caption: "My Busy Girl",
+      caption: "My beautiful programmer at work 👩‍💻",
       alt: "Capturing moments of your busy day"
     },
     {
       url: semestaGallery,
-      caption: "Semesta Gallery",
+      caption: "Saw some arts at Semesta Gallery 🖼️",
       alt: "Our art appreciation date at Semesta Gallery"
     },
     {
       url: bukber,
-      caption: "Breaking Fast Together",
+      caption: "Bukber at Blok M!! 🍔",
       alt: "Special moment during our breaking fast dinner"
     },
     {
       url: iceCreamBlokM,
-      caption: "Ice Cream at Blok M",
+      caption: "Ice cream at Blok M Plaza, before Lebaran 🌙",
       alt: "Enjoying ice cream together at Blok M"
     },
     {
       url: wfc,
-      caption: "WFC Adventures",
-      alt: "Our time together at WFC"
+      caption: "Working from cafe!! 👩‍💻",
+      alt: "Our time together working from cafe"
     },
     {
       url: myBirthday,
-      caption: "My Birthday Celebration",
+      caption: "My Birthday Celebration 🎂, now it's your time!",
       alt: "Celebrating my special day with you"
     },
     {
       url: meetMama,
-      caption: "Meeting Mama",
+      caption: "My two special women - Mama and you 😊",
       alt: "Special moment meeting mama"
     },
     {
       url: pik,
-      caption: "PIK Memories",
+      caption: "You at unique place at Pantai Indah Kapuk 🏝️",
       alt: "Our date at Pantai Indah Kapuk"
     },
     {
       url: stuckTraffic,
-      caption: "Stuck in Traffic",
+      caption: "Jakarta traffic is crazyyy 🚗",
       alt: "Making memories even when stuck in Jakarta traffic"
     },
     {
       url: lot17,
-      caption: "Lot 17",
+      caption: "Special nights at Lot 17 SCBD ✨",
       alt: "Our time together at Lot 17"
     },
     {
       url: iceCream,
-      caption: "Ice Cream Date",
+      caption: "Ice Cream Date, your favorite treat 😋",
       alt: "Sharing sweet moments over ice cream"
     },
     {
       url: sushiDate,
-      caption: "Sushi Date",
+      caption: "Sushi Date, your favorite food!! 😋",
       alt: "Enjoying sushi together"
     },
     {
       url: beam,
-      caption: "Beam",
-      alt: "Our memorable time at Beam"
+      caption: "Riding Beam at UI 🚲",
+      alt: "Our memorable time on Beam"
     },
     {
       url: pasarBaru,
-      caption: "Pasar Baru Adventure",
+      caption: "Exploring Pasar Baru! 🛍️",
       alt: "Exploring Pasar Baru together"
     },
     {
       url: gramed,
-      caption: "Gramedia Date",
+      caption: "Book hunting at Gramedia 📚",
       alt: "Book hunting at Gramedia"
     },
     {
       url: readBook,
-      caption: "Reading Together",
+      caption: "So cute holding that coding book 👩‍🏫",
       alt: "Sharing our love for books"
     },
     {
       url: oneSatrio,
-      caption: "One Satrio",
+      caption: "Late afternoon at One Satrio 🌇",
       alt: "Our time at One Satrio"
     },
     {
       url: bintaroEscape,
-      caption: "Bintaro Escape",
+      caption: "Bintaro Escape!!! Don't do it again!😔",
       alt: "Adventure time at Bintaro"
     },
     {
       url: astha,
-      caption: "Astha",
+      caption: "Enjoy some arts at Astha🖼️",
       alt: "Special moments at Astha"
     },
     {
       url: kondanganDate,
-      caption: "Wedding Reception Date",
+      caption: "Wedding date at My Friend's Wedding 👰🤵",
       alt: "Attending a wedding reception together"
     },
     {
       url: inezAndIceCream,
-      caption: "Inez and Ice Cream",
+      caption: "Cosplay being ice cream addict 🍨🤣",
       alt: "Sharing ice cream with Inez"
     },
     {
       url: recreateFirstMeet,
-      caption: "Recreating Our First Meet",
+      caption: "Recreating Our First Meet 🤩",
       alt: "Recreating the magic of our first meeting"
     },
     {
       url: jusufkalla,
-      caption: "Jusuf Kalla Building",
-      alt: "Our time at Jusuf Kalla Building"
+      caption: "at Jusuf Kalla Library 📚",
+      alt: "Our time at Jusuf Kalla Library"
     },    
   ]
 }

@@ -29,8 +29,8 @@ export function Header({ onCloseLetter }: HeaderProps) {
           <Stars className="w-8 h-8 text-primary-200" />
           <Cake className="w-8 h-8 text-primary-300" />
         </div>
-        <h1 className="text-6xl font-bold font-serif drop-shadow-lg">Happy Birthday</h1>
-        <p className="text-3xl italic text-primary-100">To My Amazing Girlfriend</p>
+        <h1 className="text-6xl font-playfair font-bold drop-shadow-lg">Happy Birthday</h1>
+        <p className="text-3xl font-playfair italic text-primary-100">To My Amazing Girlfriend</p>
       </div>
     </header>
   );
