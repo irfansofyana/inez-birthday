@@ -141,7 +141,7 @@ export const PasswordProtection = ({ onSuccess }: PasswordProtectionProps) => {
         }}
       />
       <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4 border-2 border-emerald-200">
-        <h2 className="text-2xl font-bold text-emerald-600 mb-4">
+        <h2 className="text-xl font-bold text-emerald-600 mb-4">
           💚 Enter Password to Open Letter
         </h2>
         
