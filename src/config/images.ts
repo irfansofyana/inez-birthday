@@ -1,7 +1,6 @@
 import hero from '../../assets/images/hero.jpeg'
 import firstDate from '../../assets/images/01 - first-date.jpeg'
 import sarinahDate from '../../assets/images/02 - sarinah-date.jpeg'
-import pimDate from '../../assets/images/03 - pim-date.jpeg'
 import valentine from '../../assets/images/04 - valentine.jpeg'
 import busyGirl from '../../assets/images/05 - busy-girl.jpeg'
 import semestaGallery from '../../assets/images/06 - semesta-gallery.jpeg'
@@ -15,6 +14,7 @@ import lot17 from '../../assets/images/13 - lot17.jpeg'
 import iceCream from '../../assets/images/14 - ice-cream.jpeg'
 import sushiDate from '../../assets/images/15 - sushi-date.jpeg'
 import beam from '../../assets/images/16 - beam.jpeg'
+import learningToDrive from '../../assets/images/16 - learning-to-drive.jpeg'
 import pasarBaru from '../../assets/images/17 - pasar-baru.jpeg'
 import gramed from '../../assets/images/18 - gramed.jpeg'
 import oneSatrio from '../../assets/images/19 - one-satrio.jpeg'
@@ -43,11 +43,6 @@ export const images = {
       url: sarinahDate,
       caption: "Sarinah Date!!! Thanks for guide me to this place 🛍️",
       alt: "Our lovely date at Sarinah"
-    },
-    {
-      url: pimDate,
-      caption: "PIM Date - PIM is our first place meet😜",
-      alt: "Spending time together at Pondok Indah Mall"
     },
     {
       url: valentine,
@@ -118,6 +113,11 @@ export const images = {
       url: beam,
       caption: "Riding Beam at UI 🚲",
       alt: "Our memorable time on Beam"
+    },
+    {
+      url: learningToDrive,
+      caption: "Soon to be my secondary driver 🚗",
+      alt: "You learning to drive at UI"
     },
     {
       url: pasarBaru,
