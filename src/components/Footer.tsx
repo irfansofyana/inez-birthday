@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           </span>{" "}
           by{" "}
           <a
-            href="https://github.com/irfanandriansyah1997"
+            href="https://irfansp.dev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-600 hover:text-green-700 transition-colors duration-200 font-medium hover:underline"
