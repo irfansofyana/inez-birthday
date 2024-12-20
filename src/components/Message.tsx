@@ -27,14 +27,14 @@ export function Message() {
 
             <div className="mt-12">
               <p>Love always,</p>
-              <p className="mt-2">Irfan</p>
+              <p className="mt-2">Irfan Sofyana Putra</p>
             </div>
           </div>
 
-          <p className="font-playfair font-medium text-xl text-primary-600 mt-12 text-center">
-            <p> Happy Birthday, Sayang!</p>
-            <p> Here's to many more amazing memories together 💚</p>
-          </p>
+          <div className="text-xl text-primary-600 mt-12 text-center space-y-2">
+            <p>Happy Birthday, Sayang!</p>
+            <p>Here's to many more amazing memories together 💚</p>
+          </div>
         </div>
       </div>
     </section>
