@@ -6,8 +6,47 @@ interface BackgroundMusicProps {
 }
 
 export const BackgroundMusic = ({ isPlaying }: BackgroundMusicProps) => {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(() => {
+    const savedMuteState = localStorage.getItem('audio_muted');
+    return savedMuteState ? JSON.parse(savedMuteState) : false;
+  });
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasInteracted = useRef<boolean>(false);
+
+  useEffect(() => {
+    const handleInteraction = () => {
+      if (!hasInteracted.current && audioRef.current && isPlaying) {
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Auto-play was prevented, we can ignore this
+          });
+        }
+        hasInteracted.current = true;
+      }
+    };
+
+    // Add interaction listeners
+    document.addEventListener('touchstart', handleInteraction);
+    document.addEventListener('click', handleInteraction);
+
+    return () => {
+      document.removeEventListener('touchstart', handleInteraction);
+      document.removeEventListener('click', handleInteraction);
+    };
+  }, [isPlaying]);
+
+  useEffect(() => {
+    if (isPlaying && audioRef.current && hasInteracted.current) {
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Auto-play was prevented, we'll retry on user interaction
+          hasInteracted.current = false;
+        });
+      }
+    }
+  }, [isPlaying]);
 
   useEffect(() => {
     if (isPlaying && audioRef.current) {
@@ -20,10 +59,19 @@ export const BackgroundMusic = ({ isPlaying }: BackgroundMusicProps) => {
     }
   }, [isPlaying]);
 
+  // Save mute state to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('audio_muted', JSON.stringify(isMuted));
+    if (audioRef.current) {
+      audioRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
+
   const toggleMute = () => {
     if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
+      const newMutedState = !isMuted;
+      audioRef.current.muted = newMutedState;
+      setIsMuted(newMutedState);
     }
   };
 
