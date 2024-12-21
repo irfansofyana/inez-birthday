@@ -1,6 +1,10 @@
-# Inez Birthday Website 
+# Inez 24th Birthday Website
 
-A special birthday website created with React, TypeScript, and Tailwind CSS to celebrate my girlfriend Inez's birthday. This is a personal project made with love to showcase our memories together and express my heartfelt feelings on her special day.
+A special birthday website created with React, TypeScript, and Tailwind CSS to celebrate my girlfriend, Inez's birthday. This is a personal project made with love to showcase our memories together and express my heartfelt feelings on her special day.
+
+## Live Demo
+
+You can view the live demo of the website [here](https://inez-birthday.irfansp.dev/).
 
 ## Features
 
@@ -31,11 +35,13 @@ A special birthday website created with React, TypeScript, and Tailwind CSS to c
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/irfansofyana/inez-birthday.git
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
@@ -43,6 +49,7 @@ npm install
 ### Development
 
 To start the development server:
+
 ```bash
 npm run dev
 ```
@@ -52,11 +59,13 @@ The site will be available at `http://localhost:5173`
 ### Building for Production
 
 To create a production build:
+
 ```bash
 npm run build
 ```
 
 To preview the production build:
+
 ```bash
 npm run preview
 ```
@@ -79,11 +88,12 @@ This project is a personal creation and is not licensed for public use.
 
 ## Created with love
 
-Made with love for Inez's birthday celebration 
+Made with love for Inez's 24th birthday celebration
 
 ## Credits
 
 This project was developed with the assistance of:
+
 - [bolt.new](https://bolt.new) - AI-powered development platform
-- Windsurf AI - Agentic AI coding assistant
-- Cline - AI coding assistant
+- [Windsurf Editor](https://codeium.com/windsurf) - Agentic AI coding assistant IDE
+- [Cline](https://github.com/cline/cline) - Autonomous coding agent in IDE
